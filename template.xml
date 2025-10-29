@@ -1,16 +1,110 @@
-<!-- Сохраните как template.xml и импортируйте в Draw.io -->
-<mxfile>
-  <diagram name="Use Case Diagram">
-    <mxGraphModel>
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Библиотечная система" id="12345678">
+    <mxGraphModel dx="1422" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
       <root>
+        <!-- Базовые ячейки -->
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Читатель" style="umlActor" vertex="1" parent="1">
+        
+        <!-- Use Case Diagram: Акторы -->
+        <mxCell id="actor1" value="Читатель" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="200" width="30" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="3" value="Поиск книги" style="ellipse" vertex="1" parent="1">
+        
+        <mxCell id="actor2" value="Библиотекарь" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="actor3" value="Администратор" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Use Case Diagram: Прецеденты -->
+        <mxCell id="usecase1" value="Поиск книги" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="200" y="120" width="120" height="60" as="geometry"/>
         </mxCell>
+        
+        <mxCell id="usecase2" value="Бронирование книги" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="usecase3" value="Выдача книги" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="280" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="usecase4" value="Возврат книги" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="360" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="usecase5" value="Управление каталогом" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="440" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Use Case Diagram: Связи -->
+        <mxCell id="edge1" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="actor1" target="usecase1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="120" as="sourcePoint"/>
+            <mxPoint x="250" y="120" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="edge2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="actor1" target="usecase2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="200" as="sourcePoint"/>
+            <mxPoint x="250" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Class Diagram: Классы -->
+        <mxCell id="class1" value="Book&#xa;- id: int&#xa;- title: string&#xa;- author: string&#xa;- isAvailable: boolean&#xa;+ borrow(): void&#xa;+ return(): void" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="160" height="140" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="class2" value="User&#xa;- id: int&#xa;- name: string&#xa;- email: string&#xa;- role: string&#xa;+ searchBook(): Book[]&#xa;+ reserveBook(): boolean" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="280" width="160" height="140" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="class3" value="Loan&#xa;- id: int&#xa;- bookId: int&#xa;- userId: int&#xa;- dueDate: Date&#xa;+ createLoan(): void&#xa;+ returnBook(): void" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="460" width="160" height="140" as="geometry"/>
+        </mxCell>
+        
+        <!-- Class Diagram: Связи -->
+        <mxCell id="edge3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="class2" target="class1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="280" as="sourcePoint"/>
+            <mxPoint x="480" y="240" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Sequence Diagram: Участники -->
+        <mxCell id="seq1" value="Читатель" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="seq2" value="Библиотекарь" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="680" y="100" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="seq3" value="Система" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="100" width="60" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Sequence Diagram: Сообщения -->
+        <mxCell id="msg1" value="Запрос на выдачу" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="seq1" target="seq2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="200" as="sourcePoint"/>
+            <mxPoint x="690" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="msg2" value="Ввод данных книги" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="seq2" target="seq3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="240" as="sourcePoint"/>
+            <mxPoint x="760" y="240" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
       </root>
     </mxGraphModel>
   </diagram>

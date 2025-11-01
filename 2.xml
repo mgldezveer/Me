@@ -1,73 +1,73 @@
 <mxfile host="app.diagrams.net">
     <diagram name="Алгоритм отображения товаров" id="products-flow">
-        <mxGraphModel dx="1426" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+        <mxGraphModel dx="827" dy="1169" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 
                 <!-- Начало -->
                 <mxCell id="start" value="&lt;b&gt;Начало&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-                    <mxGeometry x="400" y="40" width="80" height="80" as="geometry"/>
+                    <mxGeometry x="373" y="30" width="80" height="80" as="geometry"/>
                 </mxCell>
                 
                 <!-- Загрузить список товаров -->
-                <mxCell id="load_products" value="ProductService.GetAllProductsAsync()\nЗагрузить список товаров" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="350" y="150" width="180" height="60" as="geometry"/>
+                <mxCell id="load_products" value="ProductService.GetAllProductsAsync() Загрузить список товаров" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="323" y="130" width="180" height="60" as="geometry"/>
                 </mxCell>
                 
                 <!-- Начало цикла -->
-                <mxCell id="loop_start" value="Для каждого товара\nв списке:" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="375" y="250" width="130" height="60" as="geometry"/>
+                <mxCell id="loop_start" value="Для каждого товара в списке:" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="348" y="210" width="130" height="60" as="geometry"/>
                 </mxCell>
                 
                 <!-- Проверка Stock == 0 -->
                 <mxCell id="check_stock" value="Stock == 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-                    <mxGeometry x="375" y="340" width="130" height="80" as="geometry"/>
+                    <mxGeometry x="348" y="290" width="130" height="80" as="geometry"/>
                 </mxCell>
                 
                 <!-- Подсветить голубым -->
-                <mxCell id="highlight_blue" value="Подсветить строку\nголубым цветом" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="200" y="450" width="130" height="60" as="geometry"/>
+                <mxCell id="highlight_blue" value="Подсветить строку голубым цветом" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="173" y="390" width="130" height="60" as="geometry"/>
                 </mxCell>
                 
                 <!-- Проверка Discount > 0.15 -->
                 <mxCell id="check_discount" value="Discount &gt; 0.15?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-                    <mxGeometry x="550" y="450" width="130" height="80" as="geometry"/>
+                    <mxGeometry x="523" y="390" width="130" height="80" as="geometry"/>
                 </mxCell>
                 
                 <!-- Подсветить зеленым -->
-                <mxCell id="highlight_green" value="Подсветить строку\nцветом #2E8B57" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-                    <mxGeometry x="550" y="560" width="130" height="60" as="geometry"/>
+                <mxCell id="highlight_green" value="Подсветить строку цветом #2E8B57" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="523" y="490" width="130" height="60" as="geometry"/>
                 </mxCell>
                 
                 <!-- Проверка Discount > 0 -->
                 <mxCell id="check_any_discount" value="Discount &gt; 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-                    <mxGeometry x="375" y="670" width="130" height="80" as="geometry"/>
+                    <mxGeometry x="348" y="590" width="130" height="80" as="geometry"/>
                 </mxCell>
                 
                 <!-- Показать перечеркнутую цену -->
-                <mxCell id="show_strikethrough" value="Показать перечеркнутую\nосновную цену (красный)\nи итоговую цену (черный)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-                    <mxGeometry x="200" y="780" width="130" height="80" as="geometry"/>
+                <mxCell id="show_strikethrough" value="Показать перечеркнутую основную цену (красный) и итоговую цену (черный)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="173" y="690" width="130" height="80" as="geometry"/>
                 </mxCell>
                 
                 <!-- Показать основную цену -->
-                <mxCell id="show_normal_price" value="Показать основную\nцену (черный)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-                    <mxGeometry x="550" y="780" width="130" height="60" as="geometry"/>
+                <mxCell id="show_normal_price" value="Показать основную цену (черный)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="523" y="690" width="130" height="60" as="geometry"/>
                 </mxCell>
                 
                 <!-- Конец цикла -->
-                <mxCell id="loop_end" value="Конец цикла\nпо товарам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="375" y="880" width="130" height="60" as="geometry"/>
+                <mxCell id="loop_end" value="Конец цикла по товарам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="348" y="790" width="130" height="60" as="geometry"/>
                 </mxCell>
                 
                 <!-- Отобразить в DataGridView -->
-                <mxCell id="display_grid" value="Отобразить форматированные\nданные в DataGridView" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-                    <mxGeometry x="375" y="970" width="130" height="60" as="geometry"/>
+                <mxCell id="display_grid" value="Отобразить форматированные данные в DataGridView" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="348" y="870" width="130" height="60" as="geometry"/>
                 </mxCell>
                 
                 <!-- Конец -->
                 <mxCell id="end" value="&lt;b&gt;Конец&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-                    <mxGeometry x="400" y="1060" width="80" height="80" as="geometry"/>
+                    <mxGeometry x="373" y="950" width="80" height="80" as="geometry"/>
                 </mxCell>
                 
                 <!-- Связи -->

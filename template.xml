@@ -1,48 +1,48 @@
 <mxfile host="app.diagrams.net">
-    <diagram name="ER-диаграмма - Обувной магазин" id="6iVx7b7H32QfKlfJd9eG">
-        <mxGraphModel dx="1426" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <diagram name="ER-диаграмма - Обувной магазин" id="er-diagram">
+        <mxGraphModel dx="827" dy="1169" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 
                 <!-- USERS Table -->
                 <mxCell id="users" value="&lt;b&gt;USERS&lt;/b&gt;&lt;br&gt;┌───────────────┐&lt;br&gt;│ &lt;b&gt;UserID&lt;/b&gt; (PK) │&lt;br&gt;│ Login │&lt;br&gt;│ PasswordHash │&lt;br&gt;│ FullName │&lt;br&gt;│ &lt;i&gt;RoleID (FK)&lt;/i&gt; │&lt;br&gt;│ CreatedDate │&lt;br&gt;└───────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="40" y="40" width="150" height="160" as="geometry"/>
+                    <mxGeometry x="50" y="50" width="140" height="150" as="geometry"/>
                 </mxCell>
                 
                 <!-- ROLES Table -->
                 <mxCell id="roles" value="&lt;b&gt;ROLES&lt;/b&gt;&lt;br&gt;┌─────────────┐&lt;br&gt;│ &lt;b&gt;RoleID&lt;/b&gt; (PK) │&lt;br&gt;│ RoleName │&lt;br&gt;└─────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-                    <mxGeometry x="240" y="40" width="130" height="100" as="geometry"/>
-                </mxCell>
-                
-                <!-- PRODUCTS Table -->
-                <mxCell id="products" value="&lt;b&gt;PRODUCTS&lt;/b&gt;&lt;br&gt;┌──────────────────┐&lt;br&gt;│ &lt;b&gt;ProductID&lt;/b&gt; (PK) │&lt;br&gt;│ Name │&lt;br&gt;│ Description │&lt;br&gt;│ &lt;i&gt;CategoryID (FK)&lt;/i&gt; │&lt;br&gt;│ &lt;i&gt;ManufacturerID (FK)&lt;/i&gt; │&lt;br&gt;│ &lt;i&gt;SupplierID (FK)&lt;/i&gt; │&lt;br&gt;│ Price │&lt;br&gt;│ Unit │&lt;br&gt;│ Stock │&lt;br&gt;│ Discount │&lt;br&gt;│ ImagePath │&lt;br&gt;│ CreatedDate │&lt;br&gt;└──────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-                    <mxGeometry x="40" y="280" width="160" height="280" as="geometry"/>
-                </mxCell>
-                
-                <!-- CATEGORIES Table -->
-                <mxCell id="categories" value="&lt;b&gt;CATEGORIES&lt;/b&gt;&lt;br&gt;┌────────────────┐&lt;br&gt;│ &lt;b&gt;CategoryID&lt;/b&gt; (PK) │&lt;br&gt;│ CategoryName │&lt;br&gt;└────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-                    <mxGeometry x="250" y="280" width="140" height="100" as="geometry"/>
-                </mxCell>
-                
-                <!-- MANUFACTURERS Table -->
-                <mxCell id="manufacturers" value="&lt;b&gt;MANUFACTURERS&lt;/b&gt;&lt;br&gt;┌───────────────────┐&lt;br&gt;│ &lt;b&gt;ManufacturerID&lt;/b&gt; (PK) │&lt;br&gt;│ ManufacturerName │&lt;br&gt;└───────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-                    <mxGeometry x="250" y="420" width="150" height="100" as="geometry"/>
-                </mxCell>
-                
-                <!-- SUPPLIERS Table -->
-                <mxCell id="suppliers" value="&lt;b&gt;SUPPLIERS&lt;/b&gt;&lt;br&gt;┌────────────────┐&lt;br&gt;│ &lt;b&gt;SupplierID&lt;/b&gt; (PK) │&lt;br&gt;│ SupplierName │&lt;br&gt;│ ContactInfo │&lt;br&gt;└────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-                    <mxGeometry x="250" y="560" width="140" height="120" as="geometry"/>
+                    <mxGeometry x="220" y="50" width="120" height="90" as="geometry"/>
                 </mxCell>
                 
                 <!-- ORDERS Table -->
                 <mxCell id="orders" value="&lt;b&gt;ORDERS&lt;/b&gt;&lt;br&gt;┌────────────────┐&lt;br&gt;│ &lt;b&gt;OrderID&lt;/b&gt; (PK) │&lt;br&gt;│ &lt;i&gt;UserID (FK)&lt;/i&gt; │&lt;br&gt;│ OrderDate │&lt;br&gt;│ Status │&lt;br&gt;│ TotalAmount │&lt;br&gt;└────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-                    <mxGeometry x="500" y="40" width="140" height="140" as="geometry"/>
+                    <mxGeometry x="50" y="230" width="140" height="130" as="geometry"/>
                 </mxCell>
                 
                 <!-- ORDER_DETAILS Table -->
                 <mxCell id="order_details" value="&lt;b&gt;ORDER_DETAILS&lt;/b&gt;&lt;br&gt;┌──────────────────┐&lt;br&gt;│ &lt;b&gt;OrderDetailID&lt;/b&gt; (PK) │&lt;br&gt;│ &lt;i&gt;OrderID (FK)&lt;/i&gt; │&lt;br&gt;│ &lt;i&gt;ProductID (FK)&lt;/i&gt; │&lt;br&gt;│ Quantity │&lt;br&gt;│ UnitPrice │&lt;br&gt;└──────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-                    <mxGeometry x="500" y="240" width="150" height="140" as="geometry"/>
+                    <mxGeometry x="220" y="230" width="140" height="130" as="geometry"/>
+                </mxCell>
+                
+                <!-- PRODUCTS Table -->
+                <mxCell id="products" value="&lt;b&gt;PRODUCTS&lt;/b&gt;&lt;br&gt;┌──────────────────┐&lt;br&gt;│ &lt;b&gt;ProductID&lt;/b&gt; (PK) │&lt;br&gt;│ Name │&lt;br&gt;│ Description │&lt;br&gt;│ &lt;i&gt;CategoryID (FK)&lt;/i&gt; │&lt;br&gt;│ &lt;i&gt;ManufacturerID (FK)&lt;/i&gt; │&lt;br&gt;│ &lt;i&gt;SupplierID (FK)&lt;/i&gt; │&lt;br&gt;│ Price │&lt;br&gt;│ Unit │&lt;br&gt;│ Stock │&lt;br&gt;│ Discount │&lt;br&gt;│ ImagePath │&lt;br&gt;│ CreatedDate │&lt;br&gt;└──────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="400" width="150" height="260" as="geometry"/>
+                </mxCell>
+                
+                <!-- CATEGORIES Table -->
+                <mxCell id="categories" value="&lt;b&gt;CATEGORIES&lt;/b&gt;&lt;br&gt;┌────────────────┐&lt;br&gt;│ &lt;b&gt;CategoryID&lt;/b&gt; (PK) │&lt;br&gt;│ CategoryName │&lt;br&gt;└────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="400" width="130" height="90" as="geometry"/>
+                </mxCell>
+                
+                <!-- MANUFACTURERS Table -->
+                <mxCell id="manufacturers" value="&lt;b&gt;MANUFACTURERS&lt;/b&gt;&lt;br&gt;┌───────────────────┐&lt;br&gt;│ &lt;b&gt;ManufacturerID&lt;/b&gt; (PK) │&lt;br&gt;│ ManufacturerName │&lt;br&gt;└───────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="520" width="140" height="90" as="geometry"/>
+                </mxCell>
+                
+                <!-- SUPPLIERS Table -->
+                <mxCell id="suppliers" value="&lt;b&gt;SUPPLIERS&lt;/b&gt;&lt;br&gt;┌────────────────┐&lt;br&gt;│ &lt;b&gt;SupplierID&lt;/b&gt; (PK) │&lt;br&gt;│ SupplierName │&lt;br&gt;│ ContactInfo │&lt;br&gt;└────────────────┘" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="640" width="130" height="110" as="geometry"/>
                 </mxCell>
                 
                 <!-- Связь USERS → ROLES -->
@@ -50,8 +50,23 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 
+                <!-- Связь ORDERS → USERS -->
+                <mxCell id="orders_users" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="users" target="orders">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                
+                <!-- Связь ORDER_DETAILS → ORDERS -->
+                <mxCell id="orderdetails_orders" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="orders" target="order_details">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                
+                <!-- Связь ORDER_DETAILS → PRODUCTS -->
+                <mxCell id="orderdetails_products" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="products" target="order_details">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                
                 <!-- Связь PRODUCTS → CATEGORIES -->
-                <mxCell id="products_categories" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="products" target="categories">
+                <mxCell id="products_categories" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="products" target="categories">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 
@@ -61,28 +76,13 @@
                 </mxCell>
                 
                 <!-- Связь PRODUCTS → SUPPLIERS -->
-                <mxCell id="products_suppliers" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="products" target="suppliers">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                
-                <!-- Связь ORDERS → USERS -->
-                <mxCell id="orders_users" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.8;entryDx=0;entryDy=0;" edge="1" parent="1" source="orders" target="users">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                
-                <!-- Связь ORDER_DETAILS → ORDERS -->
-                <mxCell id="orderdetails_orders" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="order_details" target="orders">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                
-                <!-- Связь ORDER_DETAILS → PRODUCTS -->
-                <mxCell id="orderdetails_products" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.9;entryDx=0;entryDy=0;" edge="1" parent="1" source="order_details" target="products">
+                <mxCell id="products_suppliers" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.8;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="products" target="suppliers">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 
                 <!-- Легенда -->
                 <mxCell id="legend" value="&lt;b&gt;Легенда&lt;/b&gt;&lt;br&gt;─────────────────&lt;br&gt;&lt;b&gt;PK&lt;/b&gt; - Первичный ключ&lt;br&gt;&lt;i&gt;FK&lt;/i&gt; - Внешний ключ&lt;br&gt;1:N - Один ко многим&lt;br&gt;─────────────────&lt;br&gt;&lt;b&gt;Цвета таблиц:&lt;/b&gt;&lt;br&gt;▉ Пользователи/Роли&lt;br&gt;▉ Товары&lt;br&gt;▉ Категории&lt;br&gt;▉ Производители&lt;br&gt;▉ Поставщики&lt;br&gt;▉ Заказы" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
-                    <mxGeometry x="500" y="450" width="180" height="200" as="geometry"/>
+                    <mxGeometry x="400" y="50" width="150" height="180" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
